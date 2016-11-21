@@ -1,0 +1,12 @@
+<div class="row" ng-repeat="item in result">
+  <div ng-repeat="data in item">
+    <div ng-repeat="label in data[0].metadata.labels">
+      <div ng-if="label == 'Movie'">
+        <span class="fs-title display-block"> {{ data[0].data.title }} </span>
+      </div>
+      <div ng-if="label == 'Person'">
+        <span class="fs-body-2 display-block"> {{ data[0].data.name }} - {{ data[0].data.born }} </span>
+      </div>
+    </div>
+  </div>
+</di>
